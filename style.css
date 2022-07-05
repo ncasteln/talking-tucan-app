@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: red 1px solid; */
+}
+body {
+    height: 100vh;
+    background: linear-gradient(#201f3d, #dedce6);
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif, 'Courier New', Courier, monospace;
+}
+.container {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 16px;
+}
+h1 {
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+}
+hr {
+    width: 100%;
+    margin: 8px auto;
+    border: 1px solid white;
+}
+textarea {
+    width: 100%;
+    max-width: 450px;
+    height: 200px;
+    padding: 16px;
+    display: block;
+    margin: 24px auto;
+    resize: none;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+/* grid */
+.controls__grid {
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.controls {
+    margin: 16px;
+    color: white;
+}
+.controls__modifiers > input {
+    width: 100%;
+    accent-color: rgb(243, 138, 0);
+}
+
+/* Radio buttons */
+.controls__radio{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+.controls__radio > div {
+    margin-left: 16px;
+}
+
+/* Talk button */
+button {
+    width: 100%;
+    background-color: rgb(243, 138, 0);
+    margin-top: 16px;
+    padding: 8px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif, 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+    border: none;
+}
+button:hover {
+    box-shadow: 4px 4px 0px rgb(48, 46, 46);
+    transition-duration: 0.3s;
+    transform: translate(-4px, -4px);
+}
+button:active {
+    box-shadow: none;
+    transform: translate(0, 0);
+    transition-duration: 0.2s;
+}
+button:disabled {
+    opacity: 0.6;
+}
+
+/* tucan image with class to manipulate with jS */
+img {
+    max-width: 100%;
+    min-width: 150px;
+    filter: drop-shadow(2px 2px 2px black);
+}
+.tucan__open {
+    display: none;
+}
+.talking .tucan__closed {
+    display: none;
+}
+.talking .tucan__open {
+    display: block;
+}
